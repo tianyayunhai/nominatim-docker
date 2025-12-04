@@ -28,7 +28,7 @@ fi;
 
 if [ "$IMPORT_SECONDARY_WIKIPEDIA" = "true" ]; then
   echo "Downloading Wikipedia secondary importance dump"
-  ${SCP}:wikimedia-importance-secondary.sql.gz ${PROJECT_DIR}/secondary_importance.sql.gz
+  ${SCP}:wikimedia-secondary-importance.sql.gz ${PROJECT_DIR}/secondary_importance.sql.gz
 elif [ -f "$IMPORT_SECONDARY_WIKIPEDIA" ]; then
   # use local file if asked
   ln -s "$IMPORT_SECONDARY_WIKIPEDIA" ${PROJECT_DIR}/secondary_importance.sql.gz
